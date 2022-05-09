@@ -1,0 +1,11 @@
+pandas
+matplotlib
+numpy
+torchaudio 
+--extra-index-url https://download.pytorch.org/whl/cu113
+hparm
+unidecode
+inflect
+librosa
+scipy
+tgt
