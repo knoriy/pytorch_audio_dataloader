@@ -23,7 +23,8 @@ class Dataset(Dataset):
 
     def __getitem__(self, idx):
         file_name = self.df.iloc[idx][0]
-        phone = torch.tensor(text_to_sequence(self.df.iloc[idx][2], self.preprocess_hparm.preprocessing.text.text_cleaners))
+        print(len(self.df.iloc[idx][3]))
+        phone = torch.tensor(text_to_sequence(self.df.iloc[idx][3], self.preprocess_hparm.preprocessing.text.text_cleaners))
 
         mel_path = os.path.join( self.preprocess_hparm.path.preprocessed_path, "mels", f"{file_name}.pt")
         mel = torch.load(mel_path)
